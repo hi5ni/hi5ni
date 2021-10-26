@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/**** PC ****/
+@media all and (min-width : 1201px) {
+
+}
+
+/**** Tablet ****/
+@media screen and (max-width: 1200px) {
+  /* Header */
+
+
+  /* Main */
+
+  /* Index */
+
+
+
+
+}
+
+/**** Mobile ****/
+@media all and (max-width: 767px) {
+  /* Main */
+.page {width: 100vw;;min-height: 100vh;}
+
+
+}

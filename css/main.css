@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Common */
+body {font-family: "Open Sans", "Gothic A1", "Malgun Gothic", "맑은 고딕", sans-serif;font-size: 24px;line-height: 1.4;color: #6a504f;letter-spacing: normal;}
+.blind {display: block;width: 0;height: 0;overflow: hidden;}
+.clrfix:after {content: "";display: block;clear: both;}
+body,html {width: 100%;height: 100%;box-sizing: border-box;overscroll-behavior-y: none;transition: opacity .5s cubic-bezier(.455,.03,.515,.955);background: #fff} 
+html {scroll-behavior: smooth}
+.container {max-width:960px;margin:0 auto;padding:50px 0;}
+.page {z-index: 0;min-height: 100vh;padding: 3% 5%;background: #fff;z-index: 1}
+p {font-size: 16px;line-height: 1.4;letter-spacing: normal;}
+span {font-size: 13px;line-height: 1;letter-spacing: -.43px;}
+
+/* Section */
+section:nth-child(1) {background: #6a504f;}
+section {background: #FFF;}
+
+/* Header */
+header {color: #6a504f;}
+h1 {display: block;font-size: 60px;padding: 20px 0 0 20px;cursor: pointer;font-weight: bold;line-height: 1.2em;}
+nav {position: fixed;left: 0;right: 0;top: 0;text-align: right;padding: 30px 0;z-index: 10;font-size: 24px;}
+nav li {display: inline-block;margin: 0 10px;cursor: pointer;padding: 10px 0;font-weight: bold;position: relative;}
+nav li:after {content: "";position: absolute;left: 0;bottom: 3px;width: 0px;height: 2px;margin: 5px 0 0;transition: all 0.2s ease-in-out;transition-duration: 0.3s;opacity: 0;background-color: #dcc3d6;}
+nav li:hover:after {width: 100%;opacity: 1;}
+
+/********** Main **********/
+
+/**** Load ****/
+#load {color: #FFF;text-align: center;z-index: 9;}
+#load .load_wrap {position: absolute;top: 50%;transform: translateY(-50%);left: 0;right: 0;}
+#load .load_title {font-size: 60px;font-weight: bold;margin-bottom: 30px;}
+#load .load_text {font-size: 30px;line-height: 1.5em;}
+#load .eng {margin-top: 20px; font-size: 24px;}
+
+/**** Index ****/
+.works_group {margin-bottom: 100px;display: flex;position: relative;}
+.works_group ul {width: 100%;height: 50%;}
+.works_group li {position: relative;float: left;width: calc(33.33333% - 10px);margin-right: 10px;font-size: 30px;text-align: center;line-height: 50px;overflow: hidden;border: 1px solid #000;}
+.works_group li span {display: none;color: #FFF;font-size: 18px;}
+.works_group li:last-child {margin-right: 0;}
+.works_group a, .works_group span, .works_group img {display: block;}
+.works_group img {box-sizing: border-box;height: 600px;}
+
+.works_group a {width: 100%;height: 600px;position: absolute;left: 0;top: 0;background: rgba(0,0,0,0.2);z-index: 10;}
+.works_group span {padding-top: 600px;}
+.works_group .next {position:absolute;top:50%;right:30px;font-size:2em;color:gray;cursor: pointer;}
+.works_group .prev { position:absolute;top:50%;left:30px;font-size:2em;color:gray;cursor: pointer;}
+
+/**** Works ****/
+#works {position: relative;}
+#works ul {cursor: pointer;}
+#works li {border-bottom: 1px solid #000;}
+#works .work_list img {width: 100%;height: 100%;}
+
+/* 마우스 호버하면 설명글 */
+#container {width:100%;height:400px;overflow:hidden;z-index:0;padding:0;margin:0 auto;}
+
+#overlay {
+	background-color:#000;
+	display:block;
+	right: 0;
+	/*위쪽 #container 박스 사이즈와 같게*/
+	width:100%;
+	height:400px;
+	z-index:1;
+	}
+#hover {
+	width:100%;
+	display:block;
+	height:400x;
+	position:absolute;
+	z-index:3;
+	padding:25px;
+	}
+#hover p {
+	color:#fff;
+	font-weight:normal;
+	}
+
+/**** About ****/
+#about h2 {font-weight: bold;margin-bottom: 100px;}
+#about .myinfo_tit {font-weight: bold;text-align: left;}
+#about .myskills_tit {font-weight: bold;text-align: left;}
+#about ul {float: left;}
+#about .myinfo {float: left;display: block;width: 100%;font-size: 16px;border-top: 1px solid #6a504f;margin-bottom: 50px;}
+#about .myinfo li {margin-top: 10px;}
+#about .myskills {float: left;display: block;width: 100%;border-top: 1px solid #6a504f;}
+
+#about .strength {width: 100%;text-align: center;margin-top: 10px;}
+#about .strength li {float: left;width: calc(100% / 3 - 15px);height: 250px;margin-right: 15px;}
+#about .strength li:last-child {margin-right: 0;}
+#about .strength p {text-align: left;}
+
+#about .edu {border-bottom: 1px solid #6a504f;}
+#about .edu_tit {font-weight: bold;text-align: left;}
+#about .computer {width: 100%;text-align: center;}
+#about .computer li {float: left;width: 100%;height: 200px;margin-right: 15px;}
+
+
+/**** @hi5ni ****/
+#hi5ni {line-height: 1.5em;position: relative;}
+#hi5ni h1 {display: block;;color: #6a504f;display: block;font-size: 70px;padding: 20px 0 0 20px;cursor: pointer;font-weight: bold;line-height: 1.2em;}
+#hi5ni span {float: right;}
+#hi5ni .msg {position: absolute;top: 24%;right: 27%;font-size: 16px;display: none;}
+#hi5ni .contact {font-size: 24px;cursor: pointer;position: relative;}
+#hi5ni .contact:after {content: "";position: absolute;left: 0;bottom: -5px;width: 0px;height: 2px;margin: 5px 0 0;transition: all 0.2s ease-in-out;transition-duration: 0.3s;opacity: 0;background-color: #dcc3d6;}
+#hi5ni .contact:hover:after {width: 100%;opacity: 1;}
+
+#hi5ni strong {font-size: 34px;display: block;}
+#hi5ni p {position: absolute;left: 50%;right: 0;top:50%;font-size: 24px;}
+
+#hi5ni img {width: 350px;height: 300px;}
+
+#hi5ni li {width: calc(25% - 10px);float: left;margin-bottom: 10px;}
+#hi5ni li img {display: block;width: 100%;}
+
+/**** footer ****/
+.goTop {background: #6a504f;color: #FFF;width: 70px;height: 70px;position: fixed;right: 30px;bottom: 30px;font-size: 20px;border-radius: 50%;font-weight: 700;z-index: 2;}
+.goTop:hover {text-decoration: underline;}
